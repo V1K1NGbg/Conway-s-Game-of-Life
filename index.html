@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of live</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload='drawgrid()'>
+    <script src="script.js"></script>
+    <div id=container>
+        <canvas id='canvas' width='1000' height='500' onclick="Click(event);"></canvas>
+    </div>
+
+    <button onclick="start()">START</button>
+    <button onclick="clearInterval(add) ; started = false">STOP</button>
+    <button onclick="reset()">CLEAR</button>
+    <button onclick="preset1()">PRESET - Gosper glider gun</button>
+    <button onclick="preset2()">PRESET - Simkin glider gun</button>
+    <button onclick="preset3()">PRESET - Glider</button>
+    <button onclick="preset4()">PRESET - Pulsar</button>
+    <button onclick="random()">RANDOM</button>
+        <input type="range" id="Speedslider" value="750" min="500" max="1000" onclick="speedfunction()"
+            oninput="document.getElementById('speedvalue').innerHTML = this.value" />
+        <label id="speedvalue">750</label>
+</body>
+
+</html>
